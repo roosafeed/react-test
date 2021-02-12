@@ -29,9 +29,8 @@ function Login(props) {
     //   setIsError(true);
     // });
     //Above method is better, but this will do for now
-
-    if((userName == "john" && password == "12345") || (userName == "micky" && password == "98765")){
-        setAuthTokens({"username": userName});
+    if((userName.toLowerCase() == "john" && password == "12345") || (userName.toLowerCase() == "micky" && password == "98765")){
+        setAuthTokens({"username": userName.toLowerCase()});
         setLoggedIn(true);
     }
     else{
